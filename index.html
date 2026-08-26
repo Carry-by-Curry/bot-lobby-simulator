@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Lobby Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Bot Lobby Simulator</h1>
+        <p class="subtitle">Sichere Simulation für eigene Tests</p>
+
+        <div class="controls">
+            <label for="gameCode">Game-Code</label>
+            <input id="gameCode" type="text" placeholder="z. B. 123456">
+
+            <label for="botCount">Anzahl der Test-Bots</label>
+            <input id="botCount" type="number" min="1" max="100" value="10">
+
+            <button id="addBots">Bots hinzufügen</button>
+            <button id="clearBots" class="secondary">Lobby leeren</button>
+        </div>
+
+        <div class="status">
+            <span>Game-Code:</span>
+            <strong id="displayCode">---</strong>
+        </div>
+
+        <div class="lobby-header">
+            <h2>Lobby</h2>
+            <span id="botCounter">0 Bots</span>
+        </div>
+
+        <div id="botList" class="bot-list">
+            <div class="empty">
+                Noch keine Test-Bots in der Lobby.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
